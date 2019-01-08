@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2018 at 09:17 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.4
+-- Generation Time: Jan 08, 2019 at 08:18 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,39 +17,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `java_oop`
+-- Database: `daftarkacamata`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mahasiswa`
+-- Table structure for table `kacamata`
 --
 
-CREATE TABLE `mahasiswa` (
-  `nim` varchar(15) NOT NULL,
-  `nama` varchar(45) NOT NULL,
-  `alamat` text NOT NULL
+CREATE TABLE `kacamata` (
+  `kode` varchar(10) NOT NULL,
+  `nama` text NOT NULL,
+  `harga` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `mahasiswa`
+-- Dumping data for table `kacamata`
 --
 
-INSERT INTO `mahasiswa` (`nim`, `nama`, `alamat`) VALUES
-('09030011', 'Udin', 'Semarang'),
-('09030012', 'Tatang Sutarman Dasuke', 'Bandung');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `mahasiswa`
---
-ALTER TABLE `mahasiswa`
-  ADD PRIMARY KEY (`nim`);
-COMMIT;
+INSERT INTO `kacamata` (`kode`, `nama`, `harga`) VALUES
+('001', ' italy', '200000'),
+('002', 'gucci', '2000000');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
